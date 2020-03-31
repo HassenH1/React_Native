@@ -25,13 +25,13 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator headerMode="none">
 
-        <Stack.Screen
+        {/* <Stack.Screen
             name="profile"
             component={Profile}
             options={{
               headerShown: false
             }}
-          />
+          /> */}
 
           {/* {take this ^^} */}
 
