@@ -27,7 +27,8 @@ const Profile = () => {
 
       <View style={{ marginLeft: 30, marginRight: 30, padding: 10, alignItems: "center", justifyContent: "center" }}>
         <Text style={{ fontSize: 15 }}>
-          the Description should go here and it should be a lot.....kinda. it should be a good amount. 
+          Dream it, Do it.
+          Like Nike. 
         </Text>
       </View>
 

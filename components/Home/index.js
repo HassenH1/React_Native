@@ -9,20 +9,17 @@ const Home = () => {
   })
 
   return (
-    <View style={{ flex: 1, backgroundColor: "white" }}>
-      {
-        auth === true
-          ? <Text>Hello world</Text> //remember to put everything here when finished
-          : (
-            <View style={{  }}>
-              <Text>Pull up</Text>
-            </View>
-          )
-      }
+    <View style={styles.container}>
+      <Text>Hello world</Text> 
     </View>
   )
 }
 
 export default Home
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff"
+  }
+})

@@ -19,6 +19,8 @@ const Tabs = () => {
           iconName = 'ios-home'
         } else if (route.name == 'Profile') {
           iconName = 'ios-person'
+        } else if (route.name == 'Settings'){
+          iconName = 'ios-settings'
         }
         return <Ionicons name={iconName} size={size} color={color} />
       }

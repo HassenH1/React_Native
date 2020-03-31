@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native'
 
 const Settings = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Settings</Text>
     </View>
   )
@@ -11,4 +11,9 @@ const Settings = () => {
 
 export default Settings
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff"
+  }
+})
