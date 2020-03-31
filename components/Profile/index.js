@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View, Image } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient';
+import { Ionicons } from '@expo/vector-icons'
 
 
 const Profile = () => {
@@ -21,20 +22,26 @@ const Profile = () => {
       </View>
 
       <View style={{ alignItems: "center", margin: 15 }}>
-        <Text style={{ fontSize:30}}>NameGoesHere</Text>
+        <Text style={{ fontSize:30}}>Hassen Hassen</Text>
+      </View>
+
+      <View style={{ marginLeft: 30, marginRight: 30, padding: 30, alignItems: "center", justifyContent: "center" }}>
+        <Text style={{ fontSize: 15 }}>
+          the Description should go here and it should be a lot.....kinda. it should be a good amount. 
+        </Text>
       </View>
 
       <View style={{ alignItems: "center", justifyContent: "space-evenly", flexDirection: "row", marginLeft:"40px", marginRight:"40px" }}>
         <View>
-          <Text>One</Text>
+          <Text><Ionicons name="logo-facebook" size={25} color="#ffegef" /></Text>
         </View>
         
         <View>
-          <Text>Two</Text>
+          <Text><Ionicons name="logo-github" size={25} color="#ffegef" /></Text>
         </View>
 
         <View>
-          <Text>Three</Text>
+          <Text><Ionicons name="logo-linkedin" size={25} color="#ffegef" /></Text>
         </View>
       </View>
 
