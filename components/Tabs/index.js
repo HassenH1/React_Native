@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from '../Home'
 import Signup from '../Signup'
+import Profile from '../Profile'
 
 const Tab = createBottomTabNavigator();
 
@@ -15,8 +16,8 @@ const Tabs = () => {
       />
 
       <Tab.Screen 
-        name="Signup"
-        component={Signup}
+        name="Profile"
+        component={Profile}
       />
     </Tab.Navigator>
   )
