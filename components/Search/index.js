@@ -25,7 +25,6 @@ const Search = (props) => {
         shadowOpacity: 1.0,
         borderTopWidth: 0
       }}>
-
         <TextInput
           style={{
             width: "80%",
