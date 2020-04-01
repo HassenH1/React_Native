@@ -10,46 +10,40 @@ const Search = (props) => {
   const [value, SetValue] = useState("")
 
   return (
+    <View style={{ flex: 1, marginTop: Constant.statusBarHeight }}>
       <View style={{
-        height: 90,
-        backgroundColor: "white",
+        padding: 5,
         flexDirection: "row",
-        justifyContent: "center",
-        elevation: 1, //shadowing only works for andriod
+        justifyContent: "space-around",
+        elevation: 5,
+        backgroundColor: "#fff",
         shadowOffset: { //shadowing for ios 
           width: 1,
           height: 1
         },
         shadowColor: "black",
-        shadowOpacity: 0.5,
-        // marginTop: Constant.statusBarHeight,
+        shadowOpacity: 1.0,
+        borderTopWidth: 0
       }}>
-        
+
         <TextInput
           style={{
-            width: "70%",
+            width: "80%",
             backgroundColor: "#e6e6e6",
-            height: 40,
-            margin: Constant.statusBarHeight,
-            borderRadius: 30,
-            paddingLeft: 10
           }}
           value={value}
-          placeholder="Search"
           onChangeText={(text) => SetValue(text)}
         />
-
-        {/* <Ionicons
+        <Ionicons
           style={{
-            color: "black",
-            marginTop: Constant.statusBarHeight,
+            color: "black"
           }}
           name="md-send"
           size={32}
-          onPress={() => console.log("clicked")}
-        /> */}
-
+          onPress={() => console.log("hello world")}
+        />
       </View>
+    </View>
   )
 }
 
