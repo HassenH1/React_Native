@@ -1,19 +1,20 @@
 const express = require("express")
 const router = express.Router()
 
-const User = require("../models/User.js")
+const User = require("../model/User.js")
 
 router.post("/signup", async (req, res) => {
-  try {
-    const createUser = await User.create(req.body)
+  console.log(req.body, "<--------body")
+  // try {
+  //   const createUser = await User.create(req.body)
 
-    res.json(createUser)
+  //   res.json(createUser)
 
-  } catch (err) {
+  // } catch (err) {
 
-    console.log(err)
+  //   console.log(err)
 
-  }
+  // }
 })
 
 router.post("/signin", async (req, res) => {

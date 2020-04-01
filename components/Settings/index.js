@@ -9,15 +9,6 @@ const Settings = () => {
   return (
     <View style={styles.container}>
 
-      {/* <Modal
-        animationType="fade"
-        visible={modalVisible}
-      >
-        <View style={styles.modalContent}>
-          <Text>Hello from modal</Text>
-        </View>
-      </Modal> */}
-
       <View>
         <Button
           title="Edit Profile"

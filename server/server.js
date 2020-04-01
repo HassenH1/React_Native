@@ -14,7 +14,7 @@ app.use(cors())
 ///
 
 ///controler
-app.user('/', userController)
+app.use('/', userController)
 ///
 
 app.listen(5000, () => {
