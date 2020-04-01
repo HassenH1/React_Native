@@ -1,15 +1,22 @@
-import React from 'react'
-import { StyleSheet, Text, View, Button, Modal } from 'react-native'
+import React, { useState } from 'react'
+import { StyleSheet, Text, View, Button, Modal, TouchableHighlight, Alert } from 'react-native'
 import Constant from 'expo-constants'
 
 const Settings = () => {
 
-  const openModal = () => {
-    console.log("modal should open")
-  }
+  const [modalVisible, setModalVisible] = useState(false);
 
   return (
     <View style={styles.container}>
+
+      {/* <Modal
+        animationType="fade"
+        visible={modalVisible}
+      >
+        <View style={styles.modalContent}>
+          <Text>Hello from modal</Text>
+        </View>
+      </Modal> */}
 
       <View>
         <Button
@@ -21,9 +28,10 @@ const Settings = () => {
       <View>
         <Button
           title="Delete Profile"
-          onPress={() => console.log("Delete profile")}
+          onPress={() => console.log("delete")}
         />
       </View>
+
     </View>
   )
 }
@@ -38,5 +46,5 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-evenly",
     alignItems: "center"
-  }
+  },
 })
