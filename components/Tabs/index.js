@@ -5,6 +5,7 @@ import Home from '../Home'
 import Signup from '../Signup'
 import Profile from '../Profile'
 import Settings from '../Settings'
+import Search from '../Search'
 import { Ionicons } from '@expo/vector-icons'
 
 
@@ -21,6 +22,8 @@ const Tabs = () => {
           iconName = 'ios-person'
         } else if (route.name == 'Settings'){
           iconName = 'ios-settings'
+        } else if (route.name == 'Search'){
+          iconName = 'md-search'
         }
         return <Ionicons name={iconName} size={size} color={color} />
       }
@@ -29,6 +32,11 @@ const Tabs = () => {
       <Tab.Screen
         name="Home"
         component={Home}
+      />
+
+      <Tab.Screen
+        name="Search"
+        component={Search}
       />
 
       <Tab.Screen

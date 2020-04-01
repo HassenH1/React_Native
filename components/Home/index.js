@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { useSelector, useDispatch } from 'react-redux'
-import Header from '../Header'
+import Search from '../Search'
 
 const Home = () => {
   const dispatch = useDispatch()
@@ -11,7 +11,6 @@ const Home = () => {
 
   return (
     <View style={styles.container}>
-      <Header />
       <Text>Hello world</Text> 
     </View>
   )

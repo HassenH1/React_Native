@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import Signup from './components/Signup'
 import Signin from './components/Signin'
 import Tabs from './components/Tabs'
-import Profile from './components/Profile'
+import Search from './components/Search'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { reducer } from './reducers/reducer'
@@ -26,8 +26,8 @@ export default function App() {
         <Stack.Navigator headerMode="none">
 
         {/* <Stack.Screen
-            name="profile"
-            component={Profile}
+            name="search"
+            component={Search}
             options={{
               headerShown: false
             }}
