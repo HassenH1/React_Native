@@ -12,10 +12,10 @@ const Search = (props) => {
   return (
     <View style={{ flex: 1 }}>
       <View style={{
-        height: 98,
+        height: 70,
         backgroundColor: "white",
         flexDirection: "row",
-        justifyContent: "space-around",
+        justifyContent: "center",
         elevation: 1, //shadowing only works for andriod
         shadowOffset: { //shadowing for ios 
           width: 1,
@@ -23,8 +23,7 @@ const Search = (props) => {
         },
         shadowColor: "black",
         shadowOpacity: 0.5,
-        // marginTop: Constant.statusBarHeight,
-        marginTop: 0
+        marginTop: Constant.statusBarHeight,
       }}>
 
         <TextInput
@@ -32,7 +31,7 @@ const Search = (props) => {
             width: "80%",
             backgroundColor: "#e6e6e6",
             height: 40,
-            marginTop: Constant.statusBarHeight
+            margin: 30/2
           }}
           value={value}
           onChangeText={(text) => SetValue(text)}
@@ -41,7 +40,7 @@ const Search = (props) => {
         <Ionicons
           style={{
             color: "black",
-            marginTop: Constant.statusBarHeight
+            marginTop: 18
           }}
           name="md-send"
           size={32}
