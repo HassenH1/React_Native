@@ -44,6 +44,8 @@ const Signup = (props) => {
     console.log("did it hit here?")
     let obj = { email, username, password }
     dispatch({ type: "ADDING", payload: obj })
+  
+    
     props.navigation.navigate("signin")
     setEmail("")
     setUsername("")

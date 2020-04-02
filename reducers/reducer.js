@@ -10,7 +10,6 @@ export const reducer = (state = initialState, action) => {
 
   switch (action.type) {
     case "ADDING":
-
         fetch(`${url}/signup`, {
           method: "POST",
           headers: {
@@ -20,7 +19,7 @@ export const reducer = (state = initialState, action) => {
         })
         .then((res) => res.json())
         .then((result) => {
-          // console.log(result, "<--------result")
+          let obj = ""
           if(result.errors){
             result.errors.map((elem) => {
               console.log(elem, "<========does this work")
