@@ -45,7 +45,7 @@ const Signup = (props) => {
     let obj = { email, username, password }
     dispatch({ type: "ADDING", payload: obj })
   
-    
+    console.log(user, "<------------------------------the user returns as ?!")
     props.navigation.navigate("signin")
     setEmail("")
     setUsername("")
@@ -54,7 +54,8 @@ const Signup = (props) => {
 
   return (
     <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === "ios" ? "padding" : "height"}>
-
+      {    console.log(user, "<------------------------------the user returns as ?!")
+}
       <View style={styles.container}>
         <View>
           <Text style={styles.header}>

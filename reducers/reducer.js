@@ -10,24 +10,15 @@ export const reducer = (state = initialState, action) => {
 
   switch (action.type) {
     case "ADDING":
-        fetch(`${url}/signup`, {
-          method: "POST",
-          headers: {
-            'Content-Type': 'Application/json'
-          },
-          body: JSON.stringify(action.payload)
-        })
+      fetch(`${url}/signup`, {
+        method: "POST",
+        headers: {
+          'Content-Type': 'Application/json'
+        },
+        body: JSON.stringify(action.payload)
+      })
         .then((res) => res.json())
-        .then((result) => {
-          let obj = ""
-          if(result.errors){
-            result.errors.map((elem) => {
-              console.log(elem, "<========does this work")
-              console.log(elem.msg)
-              console.log(elem.param)
-            })
-          }
-        })
+        .then((result) => {console.log(result)})
         .catch((err) => {
           console.log(err, "<----------------the catch method?")
         })

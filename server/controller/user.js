@@ -13,9 +13,12 @@ router.post("/signup", [
   check('password').isLength({ min: 5 })
 ], (req, res) => {
 
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(422).json({ errors: errors.array() });
+  // const errors = validationResult(req);
+  // if (!errors.isEmpty()) {
+  //   return res.status(422).json({ errors: errors.array() });
+  // }
+  if (err instanceof ValidationError) {
+    return res.status(err.statusCode).json(err)
   }
   console.log("the end of the post method?")
 
