@@ -18,7 +18,7 @@ export const reducer = (state = initialState, action) => {
         body: JSON.stringify(action.payload)
       })
         .then((res) => res.json())
-        .then((result) => {console.log(result)})
+        .then((result) => { console.log(result) })
         .catch((err) => {
           console.log(err, "<----------------the catch method?")
         })
@@ -27,7 +27,6 @@ export const reducer = (state = initialState, action) => {
         ...state,
         user: action.payload
       }
-
     case "LOADING":
       return {
         ...state,
@@ -35,6 +34,22 @@ export const reducer = (state = initialState, action) => {
       }
     case "GET_USER":
       console.log(action.payload, "<-------------getting user")
+      fetch(`${url}/signin`, {
+        method: "POST",
+        headers: {
+          'Content-Type': 'Application/json'
+        },
+        body: JSON.stringify(action.payload)
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        return {
+          user:data
+        }
+      })
+      .catch((err) => {
+        console.log(err)
+      })
       return {
         ...state,
         user: action.payload

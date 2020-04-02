@@ -11,27 +11,23 @@ router.post("/signup", [
   check('username').isLength({ min: 3 }),
   // password must be at least 5 chars long
   check('password').isLength({ min: 5 })
-], (req, res) => {
+], async (req, res) => {
 
-  // const errors = validationResult(req);
-  // if (!errors.isEmpty()) {
-  //   return res.status(422).json({ errors: errors.array() });
-  // }
-  if (err instanceof ValidationError) {
-    return res.status(err.statusCode).json(err)
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(422).json({ errors: errors.array() });
   }
-  console.log("the end of the post method?")
 
-  // try {
-  //   const createUser = await User.create(req.body)
+  try {
+    const createUser = await User.create(req.body)
 
-  //   res.json(createUser)
+    res.json(createUser)
 
-  // } catch (err) {
+  } catch (err) {
 
-  //   console.log(err)
+    console.log(err)
 
-  // }
+  }
 })
 
 router.post("/signin", async (req, res) => {

@@ -40,9 +40,18 @@ const Signin = (props) => {
       }, 5000)
       return
     }
+
     let obj = { email, password }
     dispatch({ type: "GET_USER", payload: obj })
     dispatch({ type: "AUTH", payload: true })
+
+    if (!user) {
+      setError("Email or Password not Found!")
+      setTimeout(() => {
+        setError("")
+      }, 4000)
+      return
+    }
     props.navigation.navigate("tabs")
     setEmail("")
     setPassword("")
